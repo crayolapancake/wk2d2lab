@@ -32,4 +32,11 @@ class Bus
     end
   end
 
+  def pick_up_passengers(bus_stop)
+    for people in bus_stop[@queue]
+      @passengers << people
+    end
+    return @passengers.length
+  end
+
 end
